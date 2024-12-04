@@ -1,10 +1,10 @@
-import Contact from "./components/Contact";
-import Experience from "./components/Experience";
-import Footer from "./components/Footer";
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import Portfolio from "./components/Portfolio";
-import Skills from "./components/Skills";
+import Contact from "./Components/Contact";
+import Experience from "./Components/Experience";
+import Footer from "./Components/Footer";
+import Hero from "./Components/Hero";
+import Navbar from "./Components/Navbar";
+import Portfolio from "./Components/Portfolio";
+import Skills from "./Components/Skills";
 
 export default function App() {
   return (
