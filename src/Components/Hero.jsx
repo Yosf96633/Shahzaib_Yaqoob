@@ -1,43 +1,131 @@
 import React from "react";
-import { LuImport } from "react-icons/lu";
-import img from "../assets/shahziab_yaqoob.jpg"
+import champ from "../assets/champ.jpg";
+import { TypeAnimation } from "react-type-animation";
+import ShinyEffect from "./ShinyEffect";
+import {
+  AiOutlineGithub,
+  AiOutlineInstagram,
+  AiOutlineLink,
+  AiOutlineLinkedin,
+} from "react-icons/ai";
+import {
+  DiCss3,
+  DiHtml5,
+  DiJavascript1,
+  DiNodejsSmall,
+  DiReact,
+} from "react-icons/di";
 import { motion } from "framer-motion";
+
+
 const Hero = () => {
   return (
-    <div className=" flex flex-col justify-center items-center mt-8">
-      <h1 className=" mt-16 overflow-hidden text-[12vw] font-semibold uppercase leading-none ">
-        Shahzaib <br />
-        Yaqoob
-      </h1>
-      <div className=" mt-8">
-        <a
-          href="/benson-Langford.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          download
-          className=" flex items-center rounded-xl bg-lime-300 p-2 px-3 font-sans font-medium text-black hover:bg-lime-400 space-x-2"
+    <div className="mt-24 max-w-[1200px] mx-auto relative">
+        <div className="grid md:grid-cols-2 place-items-center gap-8">
+            <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            >
+                <TypeAnimation
+                    sequence={[
+                        "Web Developer",
+                        1000,
+                        "AI/ML Engeenier",
+                        1000,
+                        "Freelancer",
+                        1000
+                    ]}
+                    speed={50}
+                    repeat={Infinity}
+                    className="font-bold text-gray-400 text-xl md:text-5xl italic- mb-4"
+                />
+
+                <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.5 }}
+                className="text-gray-200 md:text-7xl text-5xl tracking-tight mb-4"
+                >
+                    HEY, I AM <br/>
+                    <span className="text-purple-500">Shahzaib Yaqoob</span>
+                </motion.p>
+
+                <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 1 }}
+                className="text-gray-300 max-w-[300px] md:max-w-[500px] md:text-2xl text-lg mb-6"
+                >
+                    I am a passionate fullstack developer with over 5 years of experience.
+                </motion.p>
+
+                <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 1.5 }}
+                className="flex flex-row items-center gap-6 my-4 md:mb-0"
+                >
+                    <motion.button whileHover={{ scale: 1.05, boxShadow: "0px 0px 8px rgba(0, 0, 0, 0.3)" }}
+                        className="z-10 cursor-pointer font-bold text-gray-200 md:w-auto p-4 border
+                                     border-purple-400 rounded-xl"     
+                    >
+                        Download CV
+                    </motion.button>
+
+                    <div className="flex gap-6 flex-row text-4xl md:text-6xl text-purple-400 z-20">
+                        <motion.a whileHover={{ scale: 1.2 }} href="#">
+                            <AiOutlineGithub/>
+                        </motion.a>
+
+                        <motion.a whileHover={{ scale: 1.2 }} href="#">
+                            <AiOutlineLinkedin/>
+                        </motion.a>
+
+                        <motion.a whileHover={{ scale: 1.2 }} href="#">
+                            <AiOutlineInstagram/>
+                        </motion.a>
+                    </div>
+                </motion.div>
+            </motion.div>
+
+
+            <motion.img 
+                src={champ}
+                className="w-[300px] md:w-[450px] rounded-full"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1 }}
+            />
+        </div>
+
+        <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 2 }}
+            className="flex flex-row text-7xl px-12 md:px-0 w-full justify-center items-center py-24"
         >
-            <span>Download Resume</span>
-             <LuImport className=" size-5"/>
-        </a>
-      </div>
-      <div className=" w-full flex justify-center ">
-          <motion.img
-          initial={{
-               scale:1,
+            <p className="text-gray-200 mr-6">My Tech Stack</p>
+            <DiHtml5 className="text-orange-600 mx-2" />
+            <DiCss3 className="text-blue-600 mx-2" />
+            <DiJavascript1 className="text-yellow-500 mx-2" />
+            <DiReact className="text-blue-500 mx-2" />
+            <DiNodejsSmall className="text-green-500 mx-2" />
 
-          }}
-          whileHover={{
-                scale:1.05
-          }}
-          transition={{
-            duration:0.75
-          }}
-           className=" mt-8 h-[30rem] max-sm:h-[23rem] max-sm:w-4/5 rounded-2xl" src={img} alt="Shahzaib Yaqoob" />
-         
-      </div>
+        </motion.div>
+
+        <div className="absolute inset-0 hidden md:block">
+            <ShinyEffect left={0} top={0} size={1400} />
+        </div>
+        
     </div>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

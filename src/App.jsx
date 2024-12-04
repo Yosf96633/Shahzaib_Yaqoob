@@ -1,41 +1,21 @@
-import React from "react";
-import Navbar from "./Components/Navbar";
-import Hero from "./Components/Hero";
-import Marquee from "./Components/Marquee";
-import Projects from "./Components/Projects";
-import About from "./Components/About";
-import Contact from "./Components/Contact";
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-  RouterProvider,
-} from "react-router-dom";
-const route = createBrowserRouter(
-  createRoutesFromElements(
-    <>
-      <Route
-        path="/"
-        element={
-          <>
-            <Navbar />
-            <Hero />
-            <Marquee />
-            <Projects />
-            <About />
-            <Contact />
-          </>
-        }
-      />
-    </>
-  )
-);
-const App = () => {
-  return (
-    <main className=" font-light antialiased selection:bg-lime-300 selection:text-black">
-      <RouterProvider router={route}/>
-    </main>
-  );
-};
+import Contact from "./components/Contact";
+import Experience from "./components/Experience";
+import Footer from "./components/Footer";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import Portfolio from "./components/Portfolio";
+import Skills from "./components/Skills";
 
-export default App;
+export default function App() {
+  return (
+    <div className=" overflow-x-hidden">
+      <Navbar/>
+      <Hero/>
+      <Skills/>
+      <Portfolio/>
+      <Experience/>
+      <Contact/>
+      <Footer/>
+    </div>
+  )
+}
