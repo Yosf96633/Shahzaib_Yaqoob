@@ -11,30 +11,24 @@ const Contact = () => {
                 <div className="text-gray-300 my-3">
                     <h3 className="text-4xl font-semibold mb-5">About <span>Me</span></h3>
                     <p className="text-justify leading-7 w-11/12 mx-auto">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-                        eos, quam vel quisquam, explicabo sit labore dignissimos optio
-                        ratione quibusdam doloribus pariatur consequuntur sint.
-                        Reprehenderit cupiditate possimus facere quasi voluptatem?
+                    A recent graduate in Computer
+            Science with a passion for Artificial Intelligence (AI) and Data
+            Science. Throughout my academic journey, I’ve honed my skills in
+            programming, machine learning, and data analysis, combining
+            theoretical knowledge with practical project experience.{" "}
                     </p>
                 </div>
 
                 <div className="flex mt-10 items-center gap-7">
                     <div className="bg-gray-800/40 p-4 rounded-lg">
-                        <h3 className="md:text-4xl text-2xl font-semibold text-white">11
+                        <h3 className="md:text-4xl text-2xl font-semibold text-white">3
                             <span>+</span>
                         </h3>
                         <p className="text-xs md:text-base"><span>Projects</span></p>
                     </div>
 
                     <div className="bg-gray-800/40 p-5 rounded-lg">
-                        <h3 className="md:text-4xl text-2xl font-semibold text-white">5
-                            <span>+</span>
-                        </h3>
-                        <p className="text-xs md:text-base"><span>years of experience</span></p>
-                    </div>
-
-                    <div className="bg-gray-800/40 p-5 rounded-lg">
-                        <h3 className="md:text-4xl text-2xl font-semibold text-white">30
+                        <h3 className="md:text-4xl text-2xl font-semibold text-white">6
                             <span>+</span>
                         </h3>
                         <p className="text-xs md:text-base"><span>happy clients</span></p>
