@@ -36,7 +36,7 @@ const Card = ({ id, url, setCards, cards }) => {
   });
 
   const handleDragEnd = () => {
-    if (Math.abs(x.get()) > 100) {
+    if (Math.abs(x.get()) > 60) {
       setCards((pv) => pv.filter((v) => v.id !== id));
     }
   };

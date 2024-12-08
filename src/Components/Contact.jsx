@@ -11,11 +11,12 @@ const Contact = () => {
                 <div className="text-gray-300 my-3">
                     <h3 className="text-4xl font-semibold mb-5">About <span>Me</span></h3>
                     <p className="text-justify leading-7 w-11/12 mx-auto">
-                    A recent graduate in Computer
-            Science with a passion for Artificial Intelligence (AI) and Data
-            Science. Throughout my academic journey, I’ve honed my skills in
-            programming, machine learning, and data analysis, combining
-            theoretical knowledge with practical project experience.{" "}
+                    I'm Shahzaib Yaqoob
+I am a Computer Science graduate with a deep passion for Artificial Intelligence (AI) and Data Science. My expertise lies in designing intelligent systems and uncovering actionable insights from data to enable impactful decision-making. With a strong foundation in programming, machine learning, and data analytics, I have completed diverse projects ranging from predictive modeling to natural language processing. These academic and practical experiences have equipped me with the skills needed for innovative AI solutions and data-driven problem-solving.
+<br />
+<br />
+<span className=" text-4xl font-semibold">My Vision{" "}</span>
+I aspire to contribute to the advancement of AI and Data Science by developing transformative technologies that reshape industries and improve lives. Whether it involves creating intelligent systems or optimizing complex processes, my goal is to stay at the forefront of innovation while leaving a meaningful impact on the world.
                     </p>
                 </div>
 
