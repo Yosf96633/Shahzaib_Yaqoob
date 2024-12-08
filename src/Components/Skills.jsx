@@ -9,9 +9,6 @@ const skills = [
         { name: 'C', icon: <SiC className=" text-blue-500"/>},
         { name: 'C++', icon: <SiCplusplus className=" text-blue-500 "/> },
         { name: 'Python', icon: <SiPython  className=" text-blue-500 "/> },
-        { name: 'JavaScript', icon: <SiJavascript  className=" text-yellow-500 "/>},
-        { name: 'SQL', icon: <SiMysql  className=" text-blue-500"/>},
-        { name: 'R', icon: <SiR  className=" text-blue-500 "/>},
       ],
     },
     {

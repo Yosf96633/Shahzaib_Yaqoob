@@ -1,5 +1,6 @@
 import React from "react";
 import champ from "../assets/champ.jpg";
+import fakeCV from "../assets/fakeCV.pdf"
 import { TypeAnimation } from "react-type-animation";
 import ShinyEffect from "./ShinyEffect";
 import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai";
@@ -25,12 +26,10 @@ const Hero = () => {
         >
           <TypeAnimation
             sequence={[
-              "Web Developer",
-              1000,
               "AI/ML Engeenier",
-              1000,
+              3000,
               "Freelancer",
-              1000,
+              3000,
             ]}
             speed={50}
             repeat={Infinity}
@@ -69,16 +68,19 @@ const Hero = () => {
             transition={{ duration: 1, delay: 1.5 }}
             className="flex flex-row items-center gap-6 my-4 md:mb-0"
           >
-            <motion.button
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0px 0px 8px rgba(0, 0, 0, 0.3)",
-              }}
-              className="z-10 cursor-pointer font-bold text-gray-200 md:w-auto p-4 border
-                                     border-purple-400 rounded-xl"
-            >
-              Download CV
-            </motion.button>
+            <motion.a
+  whileHover={{
+    scale: 1.05,
+    boxShadow: "0px 0px 8px rgba(0, 0, 0, 0.3)",
+  }}
+  href={fakeCV} // Path to your PDF
+  download="MyCV.pdf" // Optional: Specify the download file name
+  className="z-10 cursor-pointer font-bold text-gray-200 md:w-auto p-4 border
+                                   border-purple-400 rounded-xl"
+>
+  Download CV
+</motion.a>
+
           </motion.div>
         </motion.div>
 
