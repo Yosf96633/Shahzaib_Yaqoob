@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { Link } from 'react-scroll'
 import { motion } from 'framer-motion'
-import { PiShareNetworkThin } from "react-icons/pi";
-
+import nnn from "../assets/nnn.png"
 const Navbar = () => {
     const [nav, setNav] = useState(false)
 
@@ -35,10 +34,10 @@ const Navbar = () => {
   return (
     <div className='fixed top-0 left-0 w-full bg-opacity-70 backdrop-blur-md z-50'>
         <div className='max-w-[1300px] mx-auto  flex justify-between text-gray-200
-        text-xl items-center px-12 h-20'>
+        text-xl items-center px-8 h-20'>
 
            <div className=' flex justify-center items-center space-x-2'>
-<PiShareNetworkThin/>
+             <img className=' size-8 sm:size-10' src={nnn} alt="img" />
            <a className=' text-xl max-sm:text-sm' href="#">M Shahzaib Yaqoob</a>
            </div>
 

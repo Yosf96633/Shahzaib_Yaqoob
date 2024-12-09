@@ -5,39 +5,34 @@ const Slider = () => {
   const [cards, setCards] = useState(cardData);
 
   return (
-    <div
-      className="grid h-[500px] w-full place-items-center bg-[#190b1f]"
-      style={{
-        
-      }}
-    >
-        <h1 className=" text-xl text-center text-white">Swipe left or right</h1>
-      {cards.map((card) => {
-        return (
-          <Card key={card.id} cards={cards} setCards={setCards} {...card} />
-        );
-      })}
+    <div className="grid h-[500px] w-full place-items-center bg-[#190b1f]">
+      <h1 className="text-xl text-center text-white">Swipe left or right</h1>
+      {cards.map((card) => (
+        <Card key={card.id} cards={cards} setCards={setCards} {...card} />
+      ))}
     </div>
   );
 };
 
 const Card = ({ id, url, setCards, cards }) => {
   const x = useMotionValue(0);
-
   const rotateRaw = useTransform(x, [-150, 150], [-18, 18]);
   const opacity = useTransform(x, [-150, 0, 150], [0, 1, 0]);
 
   const isFront = id === cards[cards.length - 1].id;
+  const isLastCard = cards.length === 1;
 
   const rotate = useTransform(() => {
     const offset = isFront ? 0 : id % 2 ? 6 : -6;
-
     return `${rotateRaw.get() + offset}deg`;
   });
 
-  const handleDragEnd = () => {
-    if (Math.abs(x.get()) > 60) {
-      setCards((pv) => pv.filter((v) => v.id !== id));
+  const handleDragEnd = (event, info) => {
+    if (Math.abs(info.offset.x) > 60 && !isLastCard) {
+      setCards((prevCards) => prevCards.filter((card) => card.id !== id));
+    } else {
+      // Reset position if not swiped far enough
+      x.set(0);
     }
   };
 
@@ -60,12 +55,9 @@ const Card = ({ id, url, setCards, cards }) => {
       animate={{
         scale: isFront ? 1 : 0.98,
       }}
-      drag={isFront ? "x" : false}
-      dragConstraints={{
-        left: 0,
-        right: 0,
-      }}
-      onDragEnd={handleDragEnd}
+      drag={isFront && !isLastCard ? "x" : false} // Disable drag if it is the last card
+      dragConstraints={{ left: 0, right: 0 }} // Lock vertical drag
+      onDragEnd={handleDragEnd} // Handle drag release
     />
   );
 };
