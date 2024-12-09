@@ -4,19 +4,12 @@ import fakeCV from "../assets/fakeCV.pdf"
 import { TypeAnimation } from "react-type-animation";
 import ShinyEffect from "./ShinyEffect";
 import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai";
-import { SiLeetcode , SiKaggle , SiX } from "react-icons/si";
-import {
-  DiCss3,
-  DiHtml5,
-  DiJavascript1,
-  DiNodejsSmall,
-  DiReact,
-} from "react-icons/di";
+import { SiLeetcode , SiKaggle , SiX , SiThreads  } from "react-icons/si";
 import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="mt-24 max-w-[1200px] mx-auto relative">
+    <div className="mt-24 max-w-[1200px] mx-auto relative px-8">
       <div className="grid md:grid-cols-2 place-items-center gap-8">
         <motion.div
           initial={{ opacity: 0, y: -50 }}
@@ -99,10 +92,10 @@ const Hero = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1, delay: 2 }}
-        className="flex max-md:flex-col space-y-6 text-7xl px-12 md:px-0 w-full justify-center items-center py-24"
+        className="flex flex-col  space-y-6 text-7xl px-12 md:px-0 w-full justify-center items-center py-24"
       >
         <p className="text-gray-200 mr-6 mt-6">My Tech Stack</p>
-        <div className="flex space-x-10 flex-row text-4xl md:text-6xl text-purple-400 z-20">
+        <div className=" grid grid-cols-3 gap-16 text-5xl md:text-6xl text-purple-400 z-20">
           <motion.a
             whileHover={{ scale: 1.2 }}
             href="https://github.com/mshahzaib4/mshahzaib4"
@@ -131,9 +124,15 @@ const Hero = () => {
           </motion.a>
           <motion.a
             whileHover={{ scale: 1.2 }}
-            href="#"
+            href="https://x.com/shahzaib_mal_ik?s=08"
           >
             <SiX className=""/>
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.2 }}
+            href="https://www.threads.net/@shahzaib_mal_ik"
+          >
+            <SiThreads className=""/>
           </motion.a>
         </div>
       </motion.div>

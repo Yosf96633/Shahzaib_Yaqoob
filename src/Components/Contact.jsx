@@ -73,7 +73,7 @@ const Contact = () => {
             </div>
 
             <div className="flex mt-10 items-center gap-7">
-              <div className="bg-gray-800/40 p-4 rounded-lg">
+              <div className="bg-gray-800/40 p-5 rounded-lg">
                 <h3 className="md:text-4xl text-2xl font-semibold text-white">
                   4
                   <span>+</span>
