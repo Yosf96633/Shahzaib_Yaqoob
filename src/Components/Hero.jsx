@@ -1,6 +1,6 @@
 import React from "react";
 import champ from "../assets/champ.jpeg";
-import fakeCV from "../assets/fakeCV.pdf";
+import fakeCV from "../assets/Shahzaib_Yaqoob.pdf";
 import { TypeAnimation } from "react-type-animation";
 import ShinyEffect from "./ShinyEffect";
 import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai";
