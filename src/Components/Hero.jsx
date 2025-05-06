@@ -1,6 +1,6 @@
 import React from "react";
 import champ from "../assets/champ.jpeg";
-import fakeCV from "../assets/Shahzaib_Yaqoob.pdf";
+import fakeCV from "../assets/CV.pdf";
 import { TypeAnimation } from "react-type-animation";
 import ShinyEffect from "./ShinyEffect";
 import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai";
@@ -61,8 +61,8 @@ const Hero = () => {
                 scale: 1.05,
                 boxShadow: "0px 0px 8px rgba(0, 0, 0, 0.3)",
               }}
-              href={fakeCV} // Path to your PDF
-              download="MyCV.pdf" // Optional: Specify the download file name
+              href={fakeCV} 
+              download="Shahzaib_Yaqoobc:\Users\HP\Downloads\M Shahzaib Portfolio.pdf.pdf" 
               className="z-10 cursor-pointer font-bold text-gray-200 md:w-auto p-4 border
                                    border-purple-400 rounded-xl"
             >
